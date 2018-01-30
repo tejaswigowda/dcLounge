@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 254.0, 127.0, 640.0, 480.0 ],
+		"rect" : [ 760.0, 456.0, 592.0, 441.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,6 +38,59 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-42",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 517.0, 384.0, 150.0, 42.0 ],
+					"presentation" : 1,
+					"presentation_linecount" : 4,
+					"presentation_rect" : [ 452.5, 109.0, 106.0, 54.0 ],
+					"style" : "",
+					"text" : "Turn on to set mood light to the color seen by webcam"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-33",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "dictionary", "" ],
+					"patching_rect" : [ 281.5, 515.0, 47.0, 20.0 ],
+					"style" : "",
+					"text" : "maxurl"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-39",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 217.0, 715.0, 50.0, 20.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-37",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 686.5, 645.0, 50.0, 20.0 ],
+					"style" : ""
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-36",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -57,7 +110,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 271.5, 59.0, 67.0, 20.0 ],
-					"presentation_rect" : [ 521.0, 113.5, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "getvdevlist"
 				}
@@ -71,7 +123,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 491.0, 126.5, 82.0, 20.0 ],
-					"presentation_rect" : [ 521.0, 205.0, 0.0, 0.0 ],
 					"style" : "",
 					"text" : "open 0 1"
 				}
@@ -166,9 +217,9 @@
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 271.5, 424.5, 303.0, 20.0 ],
+					"patching_rect" : [ 233.0, 467.5, 303.0, 20.0 ],
 					"style" : "",
-					"text" : "sprintf get http://192.168.2.45/set=0\\\\\\,%i\\\\\\,%i\\\\\\,%i\\\\\\,0\\\\\\,0"
+					"text" : "sprintf get http://192.168.2.44/set=0\\\\\\,%i\\\\\\,%i\\\\\\,%i\\\\\\,0\\\\\\,0"
 				}
 
 			}
@@ -265,19 +316,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-55",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "dictionary", "" ],
-					"patching_rect" : [ 326.0, 457.0, 47.0, 20.0 ],
-					"style" : "",
-					"text" : "maxurl"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -292,14 +330,14 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-56",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 294.0, 369.5, 321.0, 44.0 ],
+					"patching_rect" : [ 305.5, 420.5, 304.0, 32.0 ],
 					"style" : "",
-					"text" : "sprintf get https://foxden.xyz/updateColor?id=60_01_94_13_19_41&r=%i&g=%i&b=%i"
+					"text" : "sprintf get https://foxden.xyz/updateGroupAME?r=%i&g=%i&b=%i"
 				}
 
 			}
@@ -312,7 +350,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 201.0, 383.0, 82.0, 20.0 ],
 					"style" : "",
-					"text" : "141 99 101"
+					"text" : "121 134 139"
 				}
 
 			}
@@ -338,7 +376,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 243.0, 315.0, 82.0, 20.0 ],
 					"style" : "",
-					"text" : "128 84 78"
+					"text" : "133 141 147"
 				}
 
 			}
@@ -389,7 +427,9 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 194.0, 21.0, 24.0, 24.0 ],
+					"patching_rect" : [ 163.5, 12.0, 36.0, 36.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ -0.5, 41.0, 427.0, 427.0 ],
 					"style" : ""
 				}
 
@@ -433,7 +473,7 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 175.5, 255.0, 82.0, 32.0 ],
 					"style" : "",
-					"text" : "255 128 84 78"
+					"text" : "255 133 141 147"
 				}
 
 			}
@@ -840,15 +880,17 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 0 ],
+					"destination" : [ "obj-33", 0 ],
+					"order" : 0,
 					"source" : [ "obj-30", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 0 ],
-					"source" : [ "obj-31", 0 ]
+					"destination" : [ "obj-39", 0 ],
+					"order" : 1,
+					"source" : [ "obj-30", 0 ]
 				}
 
 			}
@@ -956,7 +998,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 0 ],
+					"destination" : [ "obj-33", 0 ],
 					"source" : [ "obj-56", 0 ]
 				}
 
